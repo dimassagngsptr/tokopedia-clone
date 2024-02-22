@@ -17,7 +17,7 @@ export function CartMenu() {
             unmount: { y: 0 },
          }}>
          <MenuHandler>
-            <IconButton className="bg-white hover:bg-white shadow-none hover:shadow-none text-gray-800">
+            <IconButton className="bg-white hover:bg-white shadow-none hover:shadow-none text-gray-800 outline-none">
                <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -33,8 +33,8 @@ export function CartMenu() {
                </svg>
             </IconButton>
          </MenuHandler>
-         <MenuList>
-            <div className="w-[450px] h-[300px] flex flex-col gap-3 items-center text-black">
+         <MenuList className="outline-none">
+            <div className="w-[450px] h-[300px] flex flex-col gap-3 items-center text-black outline-none">
                <img src={emptyIcon} className="object-fill w-[30%] h-[50%]" />
                <h1 className="text-[25px] font-bold">
                   Wah, keranjang belanjamu kosong

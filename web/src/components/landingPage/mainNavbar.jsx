@@ -13,19 +13,19 @@ export function MainNavbar() {
          path: "/",
       },
       {
-         name: "Oxva Slim",
+         name: "Apple Watch",
          path: "/",
       },
       {
-         name: "Oxva Slim",
+         name: "Gula Pasir",
          path: "/",
       },
       {
-         name: "Oxva Slim",
+         name: "Readmi Pad",
          path: "/",
       },
       {
-         name: "Oxva Slim",
+         name: "Travel Bag",
          path: "/",
       },
    ];

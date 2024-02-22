@@ -32,7 +32,7 @@ export function HomeCarousel() {
                   {new Array(length).fill("").map((_, i) => (
                      <span
                         key={i}
-                        className={`block h-2 w-2 cursor-pointer rounded-full transition-all content-[''] ${
+                        className={`block h-[6px] w-[6px] cursor-pointer rounded-full transition-all content-[''] ${
                            activeIndex === i
                               ? "w-8 bg-white"
                               : "w-4 bg-white/50"

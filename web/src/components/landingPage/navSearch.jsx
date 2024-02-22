@@ -7,7 +7,7 @@ export function NavSearch({ recomendations }) {
       <div className="flex flex-col w-[90%] ml-[42px]">
          <div className="flex items-center gap-[24px]">
             <h2 className="font-semibold">Kategori</h2>
-            <div className="w-[90%] border rounded-lg border-gray-500 h-[45px] gap-2 flex items-center justify-between">
+            <div className="w-[90%] border rounded-lg border-gray-500 h-[40px] gap-2 flex items-center justify-between">
                <IconButton className="bg-white shadow-none text-gray-500 h-[100%] hover:shadow-none">
                   <svg
                      xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +40,7 @@ export function NavSearch({ recomendations }) {
                   <Link
                      key={idx}
                      to={recomend?.path}
-                     className="text-gray-600 font-normal">
+                     className="text-gray-600 text-[12px] font-normal hover:text-main-green">
                      {recomend?.name}
                   </Link>
                ))}

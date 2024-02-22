@@ -6,42 +6,33 @@ import {
    TabsHeader,
 } from "@material-tailwind/react";
 import { useState } from "react";
+import { TopUpInput } from "./topUpInput";
 
 export function TabsHome() {
-   const [activeTab, setActiveTab] = useState("html");
+   const [activeTab, setActiveTab] = useState("pulsa");
    const data = [
       {
-         label: "HTML",
-         value: "html",
-         desc: `It really matters and then like it really doesn't matter.
-      What matters is the people who are sparked by it. And the people 
-      who are like offended by it, it doesn't matter.`,
+         label: "Pulsa",
+         value: "pulsa",
+         desc: <TopUpInput />,
       },
       {
-         label: "React",
-         value: "react",
-         desc: `Because it's about motivating the doers. Because I'm here
-      to follow my dreams and inspire other people to follow their dreams, too.`,
+         label: "Paket Data",
+         value: "paketData",
+         desc: <TopUpInput />,
       },
       {
-         label: "Vue",
-         value: "vue",
+         label: "Flight",
+         value: "flight",
          desc: `We're not always in the position that we want to be at.
       We're constantly growing. We're constantly making mistakes. We're
       constantly trying to express ourselves and actualize our dreams.`,
       },
       {
-         label: "Angular",
-         value: "angular",
+         label: "Listrik PLN",
+         value: "listrikPln",
          desc: `Because it's about motivating the doers. Because I'm here
       to follow my dreams and inspire other people to follow their dreams, too.`,
-      },
-      {
-         label: "Svelte",
-         value: "svelte",
-         desc: `We're not always in the position that we want to be at.
-      We're constantly growing. We're constantly making mistakes. We're
-      constantly trying to express ourselves and actualize our dreams.`,
       },
    ];
    return (
