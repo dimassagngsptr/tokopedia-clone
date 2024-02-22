@@ -1,13 +1,25 @@
 import { IconButton } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
 import { CartMenu } from "./cartMenu";
+import { useState } from "react";
 
-export function NavSearch({ recomendations }) {
+export function NavSearch({ recomendations, setHover }) {
+   const [focus, setFocus] = useState(false);
    return (
       <div className="flex flex-col w-[90%] ml-[42px]">
          <div className="flex items-center gap-[24px]">
-            <h2 className="font-semibold">Kategori</h2>
-            <div className="w-[90%] border rounded-lg border-gray-500 h-[40px] gap-2 flex items-center justify-between">
+            <h2
+               className="font-semibold"
+               onMouseEnter={() => setHover(true)}
+               onMouseLeave={() => setHover(false)}>
+               Kategori
+            </h2>
+            <div
+               className={`${
+                  focus === true
+                     ? "w-[90%] border rounded-lg border-main-green h-[40px] gap-2 flex items-center justify-between"
+                     : "w-[90%] border rounded-lg border-gray-500 h-[40px] gap-2 flex items-center justify-between"
+               }`}>
                <IconButton className="bg-white shadow-none text-gray-500 h-[100%] hover:shadow-none">
                   <svg
                      xmlns="http://www.w3.org/2000/svg"
@@ -24,10 +36,20 @@ export function NavSearch({ recomendations }) {
                   </svg>
                </IconButton>
                <input
+                  onFocus={() => setFocus(true)}
+                  onBlur={() => setFocus(false)}
                   placeholder="Cari di Tokopedia"
                   type="text"
                   className="w-[93%] h-[100%] border rounded-l-none rounded-lg border-l-0 outline-none focus:border-none focus:border-transparent"
                />
+               <div
+                  className={`${
+                     focus === true
+                        ? "absolute top-24 h-[100px] w-[670px] rounded-md z-30 shadow-md bg-white"
+                        : "hidden"
+                  }`}>
+                  {/* <h1>test lanjut</h1> */}
+               </div>
             </div>
             <div className="ml-[10px]">
                <CartMenu />

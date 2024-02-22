@@ -14,15 +14,9 @@ export function TopUpInput() {
             </div>
             <div>
                <p className="font-semibold text-[14px]">Nominal</p>
-               <select className="px-2 h-[38px] rounded-lg border border-gray-400 focus:outline focus:outline-main-green">
-                  <option>Material Tailwind HTML</option>
-                  <option>Material Tailwind React</option>
-                  <option>Material Tailwind Vue</option>
-                  <option>Material Tailwind Angular</option>
-                  <option>Material Tailwind Svelte</option>
-               </select>
+               <select className="px-2 w-[200px] h-[38px] rounded-lg border border-gray-400 focus:outline focus:outline-main-green"></select>
             </div>
-            <Button className="relative top-3 bg-gray-300 text-gray-500 shadow-none">
+            <Button className="relative top-3 bg-gray-300 text-gray-500 shadow-none hover:shadow-none">
                Beli
             </Button>
          </div>
