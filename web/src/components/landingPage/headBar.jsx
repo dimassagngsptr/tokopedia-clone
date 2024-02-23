@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
+import { DownloadApss } from "./downloadApss";
+import { useState } from "react";
 
 export function HeadBars() {
+   const [hovered, setHovered] = useState(false);
    const links = [
       { title: "Tentang Tokopedia", path: "/" },
       { title: "Mitra Tokopedia", path: "/" },
@@ -10,7 +13,7 @@ export function HeadBars() {
    ];
    return (
       <main className="px-[35px] flex justify-between items-center bg-main-gray h-[35px] text-gray-600 font-openSauceOne text-[14px] font-semibold">
-         <div className="flex gap-[10px] items-center cursor-pointer">
+         <div className="relative flex gap-[10px] items-center cursor-pointer">
             <svg
                xmlns="http://www.w3.org/2000/svg"
                fill="none"
@@ -25,7 +28,12 @@ export function HeadBars() {
                />
             </svg>
 
-            <h1 className="hover:text-main-green">Download Tokopedia App</h1>
+            <h1
+               className="hover:text-main-green"
+               onMouseEnter={() => setHovered(true)} >
+               Download Tokopedia App
+            </h1>
+            <DownloadApss hovered={hovered} setHovered={setHovered} />
          </div>
          <div className="flex gap-[36px]">
             {links?.map((item, idx) => (

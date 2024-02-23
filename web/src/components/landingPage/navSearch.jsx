@@ -5,6 +5,7 @@ import { useState } from "react";
 
 export function NavSearch({ recomendations, setHover }) {
    const [focus, setFocus] = useState(false);
+   const [data, setData] = useState();
    return (
       <div className="flex flex-col w-[90%] ml-[42px]">
          <div className="flex items-center gap-[24px]">
@@ -38,6 +39,8 @@ export function NavSearch({ recomendations, setHover }) {
                <input
                   onFocus={() => setFocus(true)}
                   onBlur={() => setFocus(false)}
+                  onChange={(e) => setData(e?.target?.value)}
+                  value={data}
                   placeholder="Cari di Tokopedia"
                   type="text"
                   className="w-[93%] h-[100%] border rounded-l-none rounded-lg border-l-0 outline-none focus:border-none focus:border-transparent"
@@ -45,10 +48,12 @@ export function NavSearch({ recomendations, setHover }) {
                <div
                   className={`${
                      focus === true
-                        ? "absolute top-24 h-[100px] w-[670px] rounded-md z-30 shadow-md bg-white"
+                        ? "absolute px-2 py-1 top-24 h-[100px] w-[670px] rounded-md z-30 shadow-md bg-white"
                         : "hidden"
                   }`}>
-                  {/* <h1>test lanjut</h1> */}
+                  <p className="text-[12px] font-bold text-gray-500">
+                     Pencarian untuk : {data}
+                  </p>
                </div>
             </div>
             <div className="ml-[10px]">

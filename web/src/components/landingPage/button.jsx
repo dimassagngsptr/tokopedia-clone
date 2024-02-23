@@ -1,8 +1,9 @@
 import { Button } from "@material-tailwind/react";
 
-export function ButtonNav({ title, variants, backgroundColor }) {
+export function ButtonNav({ title, variants, backgroundColor, handleOpen }) {
    return (
       <Button
+         onClick={handleOpen}
          variant={variants}
          className={`${
             backgroundColor === true

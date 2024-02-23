@@ -3,6 +3,7 @@ import { ButtonNav } from "./button";
 import { NavSearch } from "./navSearch";
 import { NavLocation } from "./navLocation";
 import { useState } from "react";
+import { SignIn } from "../login/main";
 export function MainNavbar() {
    const [hovered, setHover] = useState(false);
    const recomendations = [
@@ -40,7 +41,7 @@ export function MainNavbar() {
             <NavSearch recomendations={recomendations} setHover={setHover} />
             <div className="w-[300px] flex flex-col justify-between items-end">
                <div className="flex gap-[15px]">
-                  <ButtonNav variants={"outlined"} title={"Masuk"} />
+                  <SignIn />
                   <ButtonNav
                      variants={"filled"}
                      title={"Daftar"}
