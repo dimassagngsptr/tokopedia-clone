@@ -12,7 +12,7 @@ export function SignIn() {
             title={"Masuk"}
             handleOpen={handleOpen}
          />
-         <Dialog size={"sm"} open={open} handler={handleOpen}>
+         <Dialog size={"xs"} open={open} handler={handleOpen}>
             <DialogHeader>
                <div className="w-full flex flex-col items-end gap-4 text-end border-b">
                   <svg
@@ -32,7 +32,7 @@ export function SignIn() {
                   <div className="flex justify-around items-center w-full">
                      <p className="font-bold">Masuk</p>
                      <span className="h-5 w-0.5 bg-gray-400"></span>
-                     <p className="font-normal text-[12px] text-main-green">
+                     <p className="font-normal text-[16px] cursor-pointer text-main-green">
                         Daftar
                      </p>
                   </div>
@@ -48,17 +48,17 @@ export function SignIn() {
                         type="text"
                         className="border px-4 w-[80%] h-[38px] rounded-lg focus:outline-main-green"
                      />
-                     <p className="absolute -bottom-6 right-10 text-[12px] text-main-green">
+                     <p className="absolute -bottom-6 right-10 text-[12px] text-main-green cursor-pointer hover:underline">
                         Butuh bantuan?
                      </p>
                   </div>
-                  <div className="mt-[42px] w-[80%] rounded-lg py-2 bg-gray-200 text-center font-bold">
+                  <div className="mt-[42px] w-[80%] rounded-lg py-2 bg-gray-200 text-center font-bold cursor-pointer">
                      <p>Selanjutnya</p>
                   </div>
                   <div className="flex items-center gap-2 my-[28px] justify-around">
-                     <span className="h-0.5 w-[100px] bg-gray-400"></span>
+                     <span className="h-0.5 w-[80px] bg-gray-400"></span>
                      <p className="text-[12px]">atau masuk dengan</p>
-                     <span className="h-0.5 w-[100px] bg-gray-400"></span>
+                     <span className="h-0.5 w-[80px] bg-gray-400"></span>
                   </div>
                   <div className="w-[80%] cursor-pointer border border-gray-400 rounded-lg py-2 justify-center flex items-center gap-2">
                      <svg
